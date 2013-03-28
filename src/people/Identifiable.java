@@ -2,6 +2,7 @@ package people;
 
 
 public interface Identifiable {
-    String login = new String();
-    String password = new String();
+    String getId();
+    void setId(String Identifiant);
+    boolean isValid(); 
 }
