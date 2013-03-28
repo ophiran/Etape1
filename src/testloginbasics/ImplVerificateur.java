@@ -1,18 +1,17 @@
 package testloginbasics;
 
-import people.Utilisateur;
+import java.util.HashMap;
 import people.Verificateur;
 
 public class ImplVerificateur extends Verificateur {
 
+    private HashMap tableHash;
+    
     @Override
-    public boolean validation(String username, String password) {
+    public String findPassword(String login) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    @Override
-    public boolean validation(Utilisateur utilisateur) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+   
     
 }
