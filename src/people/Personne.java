@@ -1,6 +1,6 @@
 package people;
 
 public class Personne {
-    public String nom;
-    public String prenom;
+    protected String nom;
+    protected String prenom;
 }

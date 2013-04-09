@@ -4,19 +4,53 @@
  */
 package people.dialogs;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import people.*;
+
 /**
  *
  * @author Ophiran
  */
 public class DialogLogin extends javax.swing.JFrame {
 
+    private Verificateur userVerif;
+    
     /**
      * Creates new form DialogLogin
      */
-    public DialogLogin() {
+    
+    public DialogLogin(Verificateur userVerif) {
         initComponents();
+        this.userVerif = userVerif;
+        
+        Annuler_button.addMouseListener(new MouseAdapter(){
+            public void mouseClicked(MouseEvent evt){
+                MouseClickedAnnuler(evt);
+            }
+        });
+        
+        Valider_button.addMouseListener(new MouseAdapter() {
+           public void mouseClicked(MouseEvent evt){
+               MouseClickedValider(evt);
+           } 
+        });
     }
 
+    public void MouseClickedAnnuler(MouseEvent evt)
+    {
+        this.dispose();
+    }
+    
+    public void MouseClickedValider(MouseEvent evt)
+    {
+        String test;
+        String test2 = utilisateur_TxtBox.getText();
+        System.out.println(test2);
+        test = userVerif.findPassword(utilisateur_TxtBox.getText());
+        System.out.println(test);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
