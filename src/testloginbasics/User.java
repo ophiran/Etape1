@@ -7,6 +7,8 @@ public class User extends Personne implements Utilisateur {
     private String login;
     private String password;
     
+    private static final int MIN_CHAR = 4;
+    
     @Override
     public String getLogin() {
         return login;
@@ -14,7 +16,8 @@ public class User extends Personne implements Utilisateur {
 
     @Override
     public void setLogin(String login) {
-        this.login = login;
+        if(login.length()>MIN_CHAR)
+            this.login = login;
     }
 
     @Override
@@ -24,7 +27,8 @@ public class User extends Personne implements Utilisateur {
 
     @Override
     public void setPass(String password) {
-        this.password = password;
+        if(password.length()>MIN_CHAR)
+            this.password = password;
     }
     
 }

@@ -14,7 +14,7 @@ import people.dialogs.*;
  */
 public class FenTest extends javax.swing.JFrame {
 
-    private ImplVerificateur test;
+    public ImplVerificateur test;
     /**
      * Creates new form FenTest
      */

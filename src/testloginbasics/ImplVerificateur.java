@@ -5,12 +5,13 @@ import people.Verificateur;
 
 public class ImplVerificateur extends Verificateur {
 
-    private HashMap<String,String> tableHash;
+    private HashMap<String,String> tableHash = new HashMap<>();;
     
-    public void ImplVerificateur()
+    
+    public ImplVerificateur()
     {
-        tableHash = new HashMap<>();
-        tableHash.put("login1", new String("test1"));
+        
+        tableHash.put("login1", "test1");
         tableHash.put("login2", "test2");
         tableHash.put("login3", "test3");
         tableHash.put("login4", "test4");

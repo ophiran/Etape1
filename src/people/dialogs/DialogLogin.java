@@ -44,11 +44,13 @@ public class DialogLogin extends javax.swing.JFrame {
     
     public void MouseClickedValider(MouseEvent evt)
     {
-        String test;
-        String test2 = utilisateur_TxtBox.getText();
-        System.out.println(test2);
-        test = userVerif.findPassword(utilisateur_TxtBox.getText());
-        System.out.println(test);
+        
+        boolean veriflogin = userVerif.verifLogin(utilisateur_TxtBox.getText(),
+                motDePasse_TxtBox.getText());
+        if(veriflogin)
+            System.out.println("OK");
+        else
+            System.out.println("FAILED");
     }
     
     /**
